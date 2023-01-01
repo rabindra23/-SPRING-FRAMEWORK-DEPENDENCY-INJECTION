@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
+     http://www.springframework.org/schema/context 
+     http://www.springframework.org/schema/context/spring-context-4.0.xsd"
+ >
+ 	
+ 	<bean id="winter" class="com.masai.app.task2.Collage" autowire="byName" >
+		<property name="collage_name" value="VIT" />
+		<property name="collage_address" value="Bhopal" />
+		<property name="student" ref="stud" />
+		
+	</bean>
+	
+	<bean id="stud" class="com.masai.app.task2.Student">
+		<property name="roll" value="10033" />
+		<property name="name" value="Rabindra Kumar" />
+		<property name="marks" value="999" />
+		
+	</bean>
+ 	
+ </beans>
